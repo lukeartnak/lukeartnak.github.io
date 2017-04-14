@@ -1,0 +1,27 @@
+html {
+  color: #333;
+  font-family: 'Nunito', sans-serif;
+  font-size: 12px;
+}
+
+body {
+  margin: 0;
+}
+
+.brand {
+  color: inherit;
+  display: block;
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+
+  .brand {
+    text-align: left;
+  }
+
+}
