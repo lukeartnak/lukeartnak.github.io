@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miami Scheduler</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:100,200,300,400,500,600,700,800,900">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <span>Miami Scheduler</span>
+    <div class="menu-icon">
+      <div class="menu-icon__bar"></div>
+      <div class="menu-icon__bar"></div>
+      <div class="menu-icon__bar"></div>
+    </div>
+  </header>
+  <div class="menu">
+    <a href="/">Home</a>
+    <a href="/courses">Course Catalog</a>
+    <a href="/generator">Schedule Generator</a>
+    <a href="/reviews">Instructor Reviews</a>
+    <a href="/grades">Grade Distributions</a>
+  </div>
+  <div class="hero">
+    <div class="hero__content">
+      <h1>Scheduling made easier</h1>
+      <p>Select the courses you would like to take, and we do the rest.</p>
+      <a href="/generator">Try it out</a>
+    </div>
+  </div>
+  <div class="section features">
+    <h2>Features</h2>
+    <h3>Choose Courses, Not Sections</h2>
+    <p>No more annoying searches to find the sections you were looking for. Select the courses you want to take, and every possible schedule will be created.</p>
+    <hr>
+    <h3>Weekly schedules at a Glance</h2>
+    <p>Browse through your potential schedules quickly by locking sections you like and adding break times in the interactive calendar.</p>
+    <hr>
+    <h3>Pick the right instructors</h2>
+    <p>Instructor reviews and grade distributions can be used to make sure you are getting the best out of your courses.</p>
+  </div>
+  <div class="section schedules">
+    <h2>Save your schedule</h2>
+    <h3>Download an image</h3>
+    <p>You can save any schedule as an image that you can share with your friends, use as your home screen, or just have as a reference.</p>
+    <img src="schedule.jpg" alt="Sample of a downloaded schedule image">
+    <h3>Export to Google Calendar</h3>
+    <p>Sign in with your Google account and we will add your classes for the entire semester.</p>
+    <h3>Generate a shareable link</h3>
+    <p>You can email it to an advisor, post in your group chat, or save it your home screen on your phone.</p>
+  </div>
+  <script>
+    const menu = document.querySelector('.menu');
+    const icon = document.querySelector('.menu-icon');
+    const classes = menu.classList;
+    icon.ontouchstart = e => {
+      e.preventDefault();
+      if (menu.classList.contains('open')) {
+        menu.classList.remove('open');
+        icon.classList.remove('closed');
+      } else {
+        menu.classList.add('open');
+        icon.classList.add('closed');
+      }
+    }
+  </script>
+</body>
+</html>
