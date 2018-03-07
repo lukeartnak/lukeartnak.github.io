@@ -82,9 +82,13 @@ function update() {
   }
 
   if (keyIsDown(RIGHT_ARROW)) {
-    ball.x += 5;
+    if (ball.x < width - 5) {
+      ball.x += 5;
+    }
   } else if (keyIsDown(LEFT_ARROW)) {
-    ball.x -= 5;
+    if (ball.x > 5) {
+      ball.x -= 5;
+    }
   }
 
   if (keyIsDown(UP_ARROW) && !ball.j) {
